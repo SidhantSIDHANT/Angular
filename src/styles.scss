@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    
+}
+
+body{
+    background-color: black;
+}
+#days-section input,
+#days-section li, #country-section input, #country-section li {
+    background: #4C4C4E !important;
+    border: 1px solid #438278 !important;
+    color: #BABAC5 !important;
+    margin-bottom: 8px;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+
+    figcaption {
+        position: absolute;
+        top: 0;
+        top: 20%;
+        width: 100%;
+    }
+}

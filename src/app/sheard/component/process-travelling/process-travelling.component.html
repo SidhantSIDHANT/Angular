@@ -1,0 +1,128 @@
+<section id="days-section" *ngIf="!isPlansVisibleMode; else cardRef">
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center">
+      <figure>
+        <img src="../../../../assets/images/mobile.png" alt="">
+        <figcaption>
+          <ul class="list-group" style="width: 30%; margin-left: 2.2rem;">
+            <h5 class="text-uppercase text-center text-white">how long are you travelling for?</h5>
+            <li class="list-group-item" *ngFor="let day of days" (click)="plansActive(day.id)"
+              [ngClass]="{ 'activee': isActive==day.id}">
+              {{day.days}}
+            </li>
+          </ul>
+        </figcaption>
+        <div class="btn">
+          <button class="btn btn-green text-white" (click)="onOpenBestPlans()">
+            <span>Find me a plan </span>
+            <span class="margin-left"><img src="../../../../assets/images/Vector.png" alt=""></span>
+          </button>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<ng-template #cardRef>
+  <section class="card-section" id="card-section">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center">
+        <figure>
+          <img src="../../../../assets/images/mobile.png" alt="">
+          <figcaption>
+            <h1 class="text-white text-center">here are the best plans for you…</h1>
+            <div class="card" id="card">
+              <div class="card-body">
+                <div class="card-head d-flex justify-content-between">
+                  <span>
+                    <img src="../../../../assets/images/circle.png" alt="">
+                    <img src="../../../../assets/images/Frame.png" class="mx-3" alt="">
+                    <span>INDIA</span>
+                  </span>
+                  <button class="btn-green">For You</button>
+                </div>
+                <div class="card-pack">
+                  <p class="mb-0 mt-4">
+                    PACK
+                  </p>
+                  <div class="d-flex justify-content-between mb-4">
+                    <p>
+                      <img src="../../../../assets/images/Wifi.png" alt="">
+                      <span class="ms-2">
+                        5GB
+                      </span>
+                    </p>
+                    <p>
+                      <img src="../../../../assets/images/Phone.png" alt="">
+                      <span class="ms-2">20 Min</span>
+                    </p>
+                    <p>
+                      <img src="../../../../assets/images/Message.png" alt="">
+                      <span class="ms-2">50SMS</span>
+                    </p>
+                  </div>
+                  <div class="validity d-flex justify-content-between">
+                    <p>
+                      VALIDITY <br>
+                      <span>7 days</span>
+                    </p>
+                    <p>$9</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" id="card-2">
+              <div class="card-body">
+                <div class="card-head d-flex justify-content-between">
+                  <span>
+                    <img src="../../../../assets/images/circle.png" alt="">
+                    <img src="../../../../assets/images/Frame.png" class="mx-3" alt="">
+                    <span>INDIA</span>
+                  </span>
+                  <button class="btn-green">For You</button>
+                </div>
+                <div class="card-pack">
+                  <p class="mb-0 mt-4">
+                    PACK
+                  </p>
+                  <div class="d-flex mb-4">
+                    <p>
+                      <img src="../../../../assets/images/Wifi.png" alt="">
+                      <span class="ms-2">
+                        5GB
+                      </span>
+                    </p>
+                    <p class="mx-3 ">
+                      <img src="../../../../assets/images/Phone.png" alt="">
+                      <span class="ms-2 not-application">N/A</span>
+                    </p>
+                    <p>
+                      <img src="../../../../assets/images/Message.png" alt="">
+                      <span class="ms-2 not-application">N/A</span>
+                    </p>
+                  </div>
+                  <div class="validity d-flex justify-content-between">
+                    <p>
+                      VALIDITY <br>
+                      <span>7 days</span>
+                    </p>
+                    <p>$9</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </figcaption>
+          <div class="btn">
+            <button class="btn btn-green">
+              <span>Find me a plan</span>
+              <span class="margin-left">
+                <img src="../../../../assets/images/Vector.png" alt="">
+              </span>
+            </button>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+</ng-template>

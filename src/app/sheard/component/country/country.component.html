@@ -1,0 +1,34 @@
+<section id="country-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+            <figure>
+                <img src="../../../../assets/images/mobile.png" alt="">
+                <figcaption>
+                    <mat-tab-group class="tab-width">
+                        <mat-tab label="Country">
+                            <h5 class="text-uppercase text-center text-white my-3">where are you travelling?</h5>
+                            <div class="form-group">
+                                <input type="text" [value]="searchKey" class="form-control my-3"
+                                    (keydown.enter)="keyEnter($event)" [(ngModel)]="searchKey" placeholder="search key">
+                            </div>
+                            <ul class="list-group" *ngIf="countries;">
+                                <li class="list-group-item" *ngFor="let country of countries | filter:searchKey"
+                                    (click)="onSingleCountryClick($event)">
+                                    <p>
+                                        {{country?.name.common}}
+                                    </p>
+                                </li>
+                            </ul>
+                            <ng-template #teplate>
+                                <p class="alert alert-danger text-uppercase mt-3">there is no data avilable</p>
+                            </ng-template>
+                        </mat-tab>
+                        <mat-tab label="Region"> </mat-tab>
+                    </mat-tab-group>
+                </figcaption>
+            </figure>
+            </div>
+        </div>
+    </div>
+</section>
