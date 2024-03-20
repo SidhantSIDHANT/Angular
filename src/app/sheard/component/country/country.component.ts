@@ -16,6 +16,7 @@ export class CountryComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.searchKey)
     this._apiService.getCountry()
       .subscribe((data) => {
         this.countries = data;
@@ -41,7 +42,9 @@ export class CountryComponent implements OnInit {
   onSingleCountryClick(element: any): void {
     if (element) {
       this.searchKey = element.target.innerText;
-      this.router.navigate(["/plains"])
+      setTimeout(() => {
+        this.router.navigate(["/plains"])
+      }, 500)
     }
   }
 }

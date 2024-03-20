@@ -1,12 +1,13 @@
-section#country-section {
-    height: 50vh;
+section#anxious-about-section {
+    height: 1000px;
+    overflow: hidden;
 
     li {
         cursor: pointer;
     }
 
     .tab-width {
-        width: 70%;
+        width: 80%;
         margin-left: 1.5rem;
     }
 
@@ -33,4 +34,65 @@ section#country-section {
     .mat-tab-nav-bar.mat-primary .mat-ink-bar {
         background-color: transparent;
     }
+
+
+    .anxious-about-head {
+        margin-bottom: 1rem;
+        margin-top: 6rem;
+
+        h1 {
+            margin-bottom: 2rem;
+        }
+
+        h1,
+        h2 {
+            font-size: 4rem;
+            color: white;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: #BFA2FA;
+
+        }
+    }
+
+
+
+}
+
+
+figure figcaption {
+    position: absolute;
+    left: 6%;
+    top: 20%;
+    width: 90%;
+}
+
+::ng-deep .mat-tab-label-container {
+    flex-grow: 0 !important;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+#popular-destinations {
+    padding: 4rem 4rem 0 0;
+}
+
+.anxious-inputElement-Width{
+    width: 45%;
+    margin: 0 auto;
+}
+
+.postion-column-element{
+    position: relative;
+    z-index: 55555;
+    transform: translateY(21rem);
+}
+
+.anxious-inputElement-Width h4{
+    margin-right: 10rem;
+}
+#serchInput{
+    border-left: none !important;
 }

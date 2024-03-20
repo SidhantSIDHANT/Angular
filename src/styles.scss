@@ -15,7 +15,7 @@ body{
     background-color: black;
 }
 #days-section input,
-#days-section li, #country-section input, #country-section li {
+#days-section li, #anxious-about-section input, #anxious-about-section li {
     background: #4C4C4E !important;
     border: 1px solid #438278 !important;
     color: #BABAC5 !important;
@@ -24,12 +24,22 @@ body{
 
 figure {
     position: relative;
-    overflow: hidden;
-
+    overflow:hidden;
     figcaption {
         position: absolute;
         top: 0;
-        top: 20%;
+        top: 5%;
         width: 100%;
     }
 }
+
+
+.input-group-text {
+    background: #4C4C4E !important;
+    border: 1px solid #438278 !important;
+    color: #BABAC5 !important;
+    margin-bottom: 8px;
+}
+
+
+

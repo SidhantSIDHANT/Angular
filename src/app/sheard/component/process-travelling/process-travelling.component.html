@@ -4,8 +4,17 @@
       <figure>
         <img src="../../../../assets/images/mobile.png" alt="">
         <figcaption>
+          <div class="anxious-inputElement-Width">
+            <h4 class="text-white ms-5">where are you travelling?</h4>
+        </div> 
           <ul class="list-group" style="width: 30%; margin-left: 2.2rem;">
-            <h5 class="text-uppercase text-center text-white">how long are you travelling for?</h5>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="addon-wrapping">
+                  <img src="../../../../assets/images/location_on.png" alt="">
+              </span>
+              <input type="text" id="serchInput" class="form-control" placeholder="serchKey" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <h5 class="text-uppercase text-white">how long are you travelling for?</h5>
             <li class="list-group-item" *ngFor="let day of days" (click)="plansActive(day.id)"
               [ngClass]="{ 'activee': isActive==day.id}">
               {{day.days}}

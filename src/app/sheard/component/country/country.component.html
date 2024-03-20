@@ -1,34 +1,53 @@
-<section id="country-section">
+<section id="anxious-about-section">
     <div class="container">
+        <div class="anxious-about-head">
+            <h1 class="text-capitalize text-center">Anxious about staying </h1>
+            <h2 class="text-capitalize text-center">connected on your trips?</h2>
+            <p class=" mt-5 text-center">Our e-SIM got you covered, anywhere you go!</p>
+        </div>
         <div class="row">
-            <div class="col-md-6 mx-auto">
-            <figure>
-                <img src="../../../../assets/images/mobile.png" alt="">
-                <figcaption>
-                    <mat-tab-group class="tab-width">
-                        <mat-tab label="Country">
-                            <h5 class="text-uppercase text-center text-white my-3">where are you travelling?</h5>
-                            <div class="form-group">
-                                <input type="text" [value]="searchKey" class="form-control my-3"
-                                    (keydown.enter)="keyEnter($event)" [(ngModel)]="searchKey" placeholder="search key">
-                            </div>
-                            <ul class="list-group" *ngIf="countries;">
-                                <li class="list-group-item" *ngFor="let country of countries | filter:searchKey"
-                                    (click)="onSingleCountryClick($event)">
-                                    <p>
-                                        {{country?.name.common}}
-                                    </p>
-                                </li>
-                            </ul>
-                            <ng-template #teplate>
-                                <p class="alert alert-danger text-uppercase mt-3">there is no data avilable</p>
-                            </ng-template>
-                        </mat-tab>
-                        <mat-tab label="Region"> </mat-tab>
-                    </mat-tab-group>
-                </figcaption>
-            </figure>
+            <div class="col-12 postion-column-element">
+                <div class="anxious-inputElement-Width">
+                    <h4 class="text-center text-white">where are you travelling?</h4>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">
+                            <img src="../../../../assets/images/location_on.png" alt="">
+                        </span>
+                        <input type="text" id="serchInput" [(ngModel)]="searchKey" class="form-control" placeholder="serchKey"
+                            aria-label="Username" aria-describedby="addon-wrapping"  [value]="searchKey">
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col-md-6 mx-auto d-flex justify-content-center">
+                <mat-tab-group class="tab-width">
+                    <mat-tab label="Country">
+                        <h5 class="text-uppercase text-center text-white my-3">where are you travelling?</h5>
+                        <figure>
+                            <img src="../../../../assets/images/mobile.png" alt="">
+                            <figcaption>
+                                <ul class="list-group" *ngIf="countries;">
+                                    <li class="list-group-item" *ngFor="let country of countries | filter:searchKey"
+                                        (click)="onSingleCountryClick($event)">
+                                        <p>
+                                            {{country?.name.common}}
+                                        </p>
+                                    </li>
+                                </ul>
+                                <ng-template #teplate>
+                                    <p class="alert alert-danger text-uppercase mt-3">there is no data avilable</p>
+                                </ng-template>
+                            </figcaption>
+                        </figure>
+                    </mat-tab>
+                    <mat-tab label="Region"> </mat-tab>
+                </mat-tab-group>
             </div>
         </div>
     </div>
+</section>
+
+
+<section id="popular-destinations">
+
 </section>
