@@ -16,6 +16,10 @@ export class TuiInputComponent implements OnInit {
   constructor(private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getQueryParams();
+  }
+
+  getQueryParams(): void {
     this._route.queryParams.subscribe((data) => {
       if (data) {
         this.isVisibleMode = data['param'];

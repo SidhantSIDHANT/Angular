@@ -9,18 +9,19 @@ import { Router } from '@angular/router';
 })
 export class PlansCardDetailsComponent implements OnInit {
 
-  constructor(private _subjectService : SubjectService,
-      private router : Router
-    ) { }
+  constructor(
+    private _subjectService: SubjectService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
-  isNavigatePage() : void{
+  isNavigatePage(): void {
     this.router.navigate(["/plains"])
-   setTimeout(()=>{
-    this._subjectService.sendToSubscriber(true);
-   }, 0)
+    setTimeout(() => {
+      this._subjectService.sendToSubscriber(true);
+    }, 0)
   }
 
 }

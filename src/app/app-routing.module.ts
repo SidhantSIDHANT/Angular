@@ -6,16 +6,16 @@ import { PlansCardDetailsComponent } from './sheard/component/plans-card-details
 
 const routes: Routes = [
   {
-    path: '', 
+    path: '',
     component: CountryComponent
   },
   {
-    path: 'plains', 
+    path: 'plains',
     component: ProcessTravellingComponent
   },
   {
     path: "plan-details",
-     component: PlansCardDetailsComponent
+    component: PlansCardDetailsComponent
   }
 ];
 

@@ -8,37 +8,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./country.component.scss']
 })
 export class CountryComponent implements OnInit {
-
   countries: any = [];
   search: string = "";
 
-  constructor(private _apiService: ApiService, private router: Router) {
-  }
+  constructor(private _apiService: ApiService, private router: Router) {}
 
   ngOnInit(): void {
+    this.fetchCountry();
+  }
+
+  fetchCountry(): void {
     this._apiService.getCountry()
       .subscribe((data) => {
         this.countries = data;
-        // data.forEach((element: any, i: any) => {
-        //   if (element.ccn3 > 200 && element.ccn3 < 230) {
-        //     this.countries.push(element)
-        //   }
-        // })
       })
   }
 
-  keyEnter(enter: any): void {
-    // if (enter) {
-    //   if (this.searchKey) {
-    //     this.isTravellingMode = false;
-    //     this.countries = this.countries.filter((element: any) => {
-    //       return element.name.common.toLowerCase().includes(this.searchKey.toLowerCase())
-    //     })
-    //   }
-    // }
-  }
+  keyEnter(enter: any): void { }
 
-  searchEvent(key:any) : void{
+  searchEvent(key: any): void {
     this.search = key;
   }
 
@@ -47,11 +35,10 @@ export class CountryComponent implements OnInit {
       this.search = element.target.innerText;
       setTimeout(() => {
         this.router.navigate(["/plains"], {
-          queryParams : {
-            param : true, plane : this.search
+          queryParams: {
+            param: true, plane: this.search
           }
         })
-        // localStorage.setItem('search', JSON.stringify(this.search))
       }, 500)
     }
   }
