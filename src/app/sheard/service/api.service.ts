@@ -4,38 +4,28 @@ import { Observable } from "rxjs";
 
 
 @Injectable({
-    providedIn : "root"
+  providedIn: "root"
 })
-export class ApiService{
-    url : string = `https://restcountries.com/v3.1/all`;
-//  country : any = [
-//    { name : "India", id:1},
-//    { name : "Afghanistan", id:2},
-//    { name : "Australia", id:3},
-//    { name : "Argentina" , id:7},
-//    { name : "Madagascar", id:4},
-//    { name : "Azerbaijan", id:5},
-//    { name : "Belize", id:6},
-//  ]
+export class ApiService {
+  url: string = `https://restcountries.com/v3.1/all`;
 
-days: any = [
-  { days: "7-15 days", id: 1, },
-  { days: "15-30 days", id: 2 },
-  { days: "35-45 days", id: 7 },
-  { days: "45-60 days", id: 3 },
-  { days: "60-90 days", id: 6 },
-]
-    constructor(private _http : HttpClient){}
+  days: any = [
+    { days: "7-15 days", id: 1, },
+    { days: "15-30 days", id: 2 },
+    { days: "35-45 days", id: 7 },
+    { days: "45-60 days", id: 3 },
+    { days: "60-90 days", id: 6 },
+  ]
+  constructor(private _http: HttpClient) { }
 
-      getCountry() : Observable<any>{
-        let headers = new HttpHeaders({
-            "contant-type" : "application/json"
-        })
-        return this._http.get(this.url)
-        // return this.country
-      }
+  getCountry(): Observable<any> {
+    let headers = new HttpHeaders({
+      "contant-type": "application/json"
+    })
+    return this._http.get(this.url)
+  }
 
-      getTravellingDays():Array<{days : string, id ?: number}>{
-        return this.days;
-      }
+  getTravellingDays(): Array<{ days: string, id?: number }> {
+    return this.days;
+  }
 }
