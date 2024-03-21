@@ -11,8 +11,8 @@ import { FormsModule } from '@angular/forms';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ProcessTravellingComponent } from './sheard/component/process-travelling/process-travelling.component';
 import { CountryComponent } from './sheard/component/country/country.component';
-import { CardPlansComponent } from './sheard/component/card-plans/card-plans.component';
 import { TuiInputComponent } from './sheard/component/tui-input/tui-input.component';
+import { PlansCardDetailsComponent } from './sheard/component/plans-card-details/plans-card-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,8 +20,8 @@ import { TuiInputComponent } from './sheard/component/tui-input/tui-input.compon
     FilterPipe,
     ProcessTravellingComponent,
     CountryComponent,
-    CardPlansComponent,
-    TuiInputComponent
+    TuiInputComponent,
+    PlansCardDetailsComponent
   ],
   imports: [
     BrowserModule,

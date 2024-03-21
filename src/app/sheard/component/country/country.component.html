@@ -8,14 +8,13 @@
         <div class="row">
             <div class="col-12 postion-column-element">
                 <div class="anxious-inputElement-Width">
-                    <h4 class="text-center text-white">where are you travelling?</h4>
+                    <h3 class=" text-white m-left">where are you travelling?</h3>
                     <app-tui-input (searchKeyEvent)="searchEvent($event)" [search]="search"></app-tui-input>
                 </div>
             </div>
             <div class="col-md-6 mx-auto d-flex justify-content-center">
                 <mat-tab-group class="tab-width">
                     <mat-tab label="Country">
-                        <h5 class="text-uppercase text-center text-white my-3">where are you travelling?</h5>
                         <figure>
                             <img src="../../../../assets/images/mobile.png" alt="">
                             <figcaption>
@@ -46,9 +45,6 @@
                                     <li class="list-group-item">WESTERN REGION</li>
                                     <li class="list-group-item">SOUTHERN REGION</li>
                                 </ul>
-                                <ng-template #teplate>
-                                    <p class="alert alert-danger text-uppercase mt-3">there is no data avilable</p>
-                                </ng-template>
                             </figcaption>
                         </figure>
                     </mat-tab>

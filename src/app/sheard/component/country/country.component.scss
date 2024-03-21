@@ -35,10 +35,15 @@ section#anxious-about-section {
         background-color: transparent;
     }
 
+    .m-left {
+        margin-left: 5rem;
+        font-size: 1.25rem;
+    }
 
     .anxious-about-head {
-        margin-bottom: 1rem;
-        margin-top: 6rem;
+        // margin-bottom: 1rem;
+        margin-top: 3rem;
+        transform: translateY(5rem);
 
         h1 {
             margin-bottom: 2rem;
@@ -79,20 +84,21 @@ figure figcaption {
     padding: 4rem 4rem 0 0;
 }
 
-.anxious-inputElement-Width{
+.anxious-inputElement-Width {
     width: 45%;
     margin: 0 auto;
 }
 
-.postion-column-element{
+.postion-column-element {
     position: relative;
     z-index: 55555;
-    transform: translateY(21rem);
+    transform: translateY(18rem);
 }
 
-.anxious-inputElement-Width h4{
+.anxious-inputElement-Width h4 {
     margin-right: 10rem;
 }
-#serchInput{
+
+#serchInput {
     border-left: none !important;
 }

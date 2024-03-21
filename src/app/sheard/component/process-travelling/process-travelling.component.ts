@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../service/api.service';
 import { Router } from '@angular/router';
+import { SubjectService } from '../../service/subject.service';
 
 @Component({
   selector: 'app-process-travelling',
@@ -13,11 +14,19 @@ export class ProcessTravellingComponent implements OnInit {
   isPlansVisibleMode : boolean = false;
   searchKey !: string;
 
-  constructor(private _apiService: ApiService, private router : Router) {
+  constructor(
+    private _apiService: ApiService,
+     private router : Router,
+    private _subjectService : SubjectService
+     ) {
   }
 
   ngOnInit(): void {
-    this.travellingDaysData();  
+    this.travellingDaysData(); 
+    this._subjectService.getSubscriber().subscribe((data:boolean)=>{
+      this.isPlansVisibleMode = data;
+      console.log(data)
+    })
    }
 
    travellingDaysData():void{

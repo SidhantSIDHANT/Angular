@@ -33,6 +33,10 @@ figure {
     }
 }
 
+.btn-green {
+    background-color: #177667 !important;
+    width: 14rem;
+}
 
 .input-group-text {
     background: #4C4C4E !important;
@@ -41,5 +45,12 @@ figure {
     margin-bottom: 8px;
 }
 
+.img-border{
+    border: 1px solid white;
+    padding: 1rem;
+    border-radius: 30px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
 
 

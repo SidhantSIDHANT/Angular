@@ -34,6 +34,8 @@
         <figure>
           <img src="../../../../assets/images/mobile.png" alt="">
           <figcaption>
+            <img src="../../../../assets/images/chevronleft.png"  
+            class="img-fluid img-border ms-5" (click)="isPlansVisibleMode = false">
             <h1 class="text-white text-center">here are the best plans for you…</h1>
             <div class="card" id="card">
               <div class="card-body">
@@ -118,7 +120,7 @@
             </div>
           </figcaption>
           <div class="btn">
-            <button class="btn btn-green">
+            <button class="btn btn-green" routerLink="/plan-details">
               <span>Find me a plan</span>
               <span class="margin-left">
                 <img src="../../../../assets/images/Vector.png" alt="">

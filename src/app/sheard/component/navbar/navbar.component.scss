@@ -2,8 +2,10 @@ a{
     color : white !important;
 }
 
-// #anxious-about-section{
-//     padding-top : 5rem;
-//     padding-bottom: 5rem;
-   
-// }
+
+#navbar{
+    // position: fixed;
+    // width: 100%;
+    z-index: 555555;
+    background-color: rgb(255, 255, 255, .3);   
+}
