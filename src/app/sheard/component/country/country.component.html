@@ -9,14 +9,7 @@
             <div class="col-12 postion-column-element">
                 <div class="anxious-inputElement-Width">
                     <h4 class="text-center text-white">where are you travelling?</h4>
-                    <div class="input-group flex-nowrap">
-                        <span class="input-group-text" id="addon-wrapping">
-                            <img src="../../../../assets/images/location_on.png" alt="">
-                        </span>
-                        <input type="text" id="serchInput" [(ngModel)]="searchKey" class="form-control" placeholder="serchKey"
-                            aria-label="Username" aria-describedby="addon-wrapping"  [value]="searchKey">
-                    </div>
-                
+                    <app-tui-input (searchKeyEvent)="searchEvent($event)" [search]="search"></app-tui-input>
                 </div>
             </div>
             <div class="col-md-6 mx-auto d-flex justify-content-center">
@@ -26,13 +19,32 @@
                         <figure>
                             <img src="../../../../assets/images/mobile.png" alt="">
                             <figcaption>
-                                <ul class="list-group" *ngIf="countries;">
-                                    <li class="list-group-item" *ngFor="let country of countries | filter:searchKey"
+                                <ul class="list-group" *ngIf="countries; else template">
+                                    <li class="list-group-item" *ngFor="let country of countries | filter:search"
                                         (click)="onSingleCountryClick($event)">
-                                        <p>
+                                        <p class="text-uppercase">
                                             {{country?.name.common}}
                                         </p>
                                     </li>
+                                </ul>
+                                <ng-template #template>
+                                    <p class="alert alert-danger text-uppercase mt-3">there is no data avilable</p>
+                                </ng-template>
+                            </figcaption>
+                        </figure>
+                    </mat-tab>
+                    <mat-tab label="Region">
+                        <h5 class="text-uppercase text-center text-white my-3">where are you travelling?</h5>
+                        <figure>
+                            <img src="../../../../assets/images/mobile.png" alt="">
+                            <figcaption>
+                                <ul class="list-group" *ngIf="countries;">
+                                    <li class="list-group-item">NORTHERN REGION</li>
+                                    <li class="list-group-item">NORTH-EASTERN REGION</li>
+                                    <li class="list-group-item">EASTERN REGION</li>
+                                    <li class="list-group-item">CENTRAL REGION</li>
+                                    <li class="list-group-item">WESTERN REGION</li>
+                                    <li class="list-group-item">SOUTHERN REGION</li>
                                 </ul>
                                 <ng-template #teplate>
                                     <p class="alert alert-danger text-uppercase mt-3">there is no data avilable</p>
@@ -40,7 +52,6 @@
                             </figcaption>
                         </figure>
                     </mat-tab>
-                    <mat-tab label="Region"> </mat-tab>
                 </mat-tab-group>
             </div>
         </div>

@@ -1,0 +1,9 @@
+<div class="input-group flex-nowrap">
+    <span class="input-group-text" id="addon-wrapping">
+        <img src="../../../../assets/images/location_on.png" alt="">
+    </span>
+    <input type="text" id="serchInput" [(ngModel)]="searchKey" class="form-control" placeholder="serchKey"
+        aria-describedby="addon-wrapping" (ngModelChange)="onChanges()" [value]="search" *ngIf="!isVisibleMode">
+    <input type="text" id="serchInput" class="form-control" placeholder="serchKey" aria-describedby="addon-wrapping"
+        [value]="searchKey" *ngIf="isVisibleMode">
+</div>

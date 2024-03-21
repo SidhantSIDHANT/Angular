@@ -12,6 +12,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { ProcessTravellingComponent } from './sheard/component/process-travelling/process-travelling.component';
 import { CountryComponent } from './sheard/component/country/country.component';
 import { CardPlansComponent } from './sheard/component/card-plans/card-plans.component';
+import { TuiInputComponent } from './sheard/component/tui-input/tui-input.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { CardPlansComponent } from './sheard/component/card-plans/card-plans.com
     FilterPipe,
     ProcessTravellingComponent,
     CountryComponent,
-    CardPlansComponent
+    CardPlansComponent,
+    TuiInputComponent
   ],
   imports: [
     BrowserModule,

@@ -10,13 +10,12 @@ import { Router } from '@angular/router';
 export class CountryComponent implements OnInit {
 
   countries: any = [];
-  searchKey: string = "";
+  search: string = "";
 
   constructor(private _apiService: ApiService, private router: Router) {
   }
 
   ngOnInit(): void {
-    console.log(this.searchKey)
     this._apiService.getCountry()
       .subscribe((data) => {
         this.countries = data;
@@ -39,11 +38,20 @@ export class CountryComponent implements OnInit {
     // }
   }
 
+  searchEvent(key:any) : void{
+    this.search = key;
+  }
+
   onSingleCountryClick(element: any): void {
     if (element) {
-      this.searchKey = element.target.innerText;
+      this.search = element.target.innerText;
       setTimeout(() => {
-        this.router.navigate(["/plains"])
+        this.router.navigate(["/plains"], {
+          queryParams : {
+            param : true, plane : this.search
+          }
+        })
+        // localStorage.setItem('search', JSON.stringify(this.search))
       }, 500)
     }
   }

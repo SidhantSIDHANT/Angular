@@ -11,12 +11,13 @@ export class ProcessTravellingComponent implements OnInit {
   isActive : number = 1;
   days !: Array<{days : string, id ?: number}>;
   isPlansVisibleMode : boolean = false;
+  searchKey !: string;
 
   constructor(private _apiService: ApiService, private router : Router) {
   }
 
   ngOnInit(): void {
-    this.travellingDaysData()
+    this.travellingDaysData();  
    }
 
    travellingDaysData():void{
