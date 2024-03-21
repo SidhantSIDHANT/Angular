@@ -39,6 +39,7 @@ export class ProcessTravellingComponent implements OnInit {
 
   plansActive(id: any): void {
     this.isActive = id;
+    // this.isPlansVisibleMode= true;
   }
 
   onOpenBestPlans(): void {
