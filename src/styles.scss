@@ -8,10 +8,6 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-
-}
-
-body {
     background-color: black;
 }
 
@@ -21,6 +17,7 @@ body {
 #anxious-about-section li {
     background: #4C4C4E !important;
     border: 1px solid #438278 !important;
+    border-left: none !important;
     color: #BABAC5 !important;
     margin-bottom: 8px;
 }
