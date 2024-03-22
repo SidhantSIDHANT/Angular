@@ -9,10 +9,10 @@ import { SubjectService } from '../../service/subject.service';
   styleUrls: ['./process-travelling.component.scss']
 })
 export class ProcessTravellingComponent implements OnInit {
+  
   isActive: number = 1;
   days !: Array<{ days: string, id?: number }>;
   isPlansVisibleMode: boolean = false;
-  searchKey !: string;
 
   constructor(
     private _apiService: ApiService,
