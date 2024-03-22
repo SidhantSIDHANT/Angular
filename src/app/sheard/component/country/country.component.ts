@@ -11,7 +11,7 @@ export class CountryComponent implements OnInit {
   countries: any = [];
   search: string = "";
 
-  constructor(private _apiService: ApiService, private router: Router) {}
+  constructor(private _apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.fetchCountry();
@@ -21,6 +21,8 @@ export class CountryComponent implements OnInit {
     this._apiService.getCountry()
       .subscribe((data) => {
         this.countries = data;
+      }, (err) => {
+        alert("504 Gateway Timeout Error") // use snack-bar also for error
       })
   }
 

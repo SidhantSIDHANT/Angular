@@ -33,13 +33,17 @@ export class ProcessTravellingComponent implements OnInit {
     })
   }
 
-  travellingDaysData(): void {
-    this.days = this._apiService.getTravellingDays();
+  async travellingDaysData(): Promise<void> {
+    try {
+      this.days = await this._apiService.getTravellingDays();
+    } catch (err) {
+      alert("504 Gateway Timeout Error") // use snack-bar also for error
+    }
   }
 
   plansActive(id: any): void {
     this.isActive = id;
-    // this.isPlansVisibleMode= true;
+    // this.isPlansVisibleMode= true; // click on plans open card template view
   }
 
   onOpenBestPlans(): void {
