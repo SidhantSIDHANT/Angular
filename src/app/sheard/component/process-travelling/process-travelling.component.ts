@@ -23,19 +23,18 @@ export class ProcessTravellingComponent implements OnInit {
 
   ngOnInit(): void {
     this.travellingDaysData();
-    this.fetchSubscriber();
   }
 
   fetchSubscriber(): void {
     this._subjectService.getSubscriber().subscribe((data: boolean) => {
       this.isPlansVisibleMode = data;
-      console.log(data)
     })
   }
 
   async travellingDaysData(): Promise<void> {
     try {
       this.days = await this._apiService.getTravellingDays();
+      this.fetchSubscriber();
     } catch (err) {
       alert("504 Gateway Timeout Error") // use snack-bar also for error
     }

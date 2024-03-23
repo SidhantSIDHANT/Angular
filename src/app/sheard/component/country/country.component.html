@@ -9,7 +9,8 @@
             <div class="col-12 postion-column-element">
                 <div class="anxious-inputElement-Width">
                     <h3 class=" text-white m-left">where are you travelling?</h3>
-                    <app-tui-input (searchKeyEvent)="searchEvent($event)" [search]="search"></app-tui-input>
+                    <app-tui-input [search]="search" (searchKeyEvent)="searchEvent($event)"></app-tui-input>
+                    {{search}}
                 </div>
             </div>
             <div class="col-md-6 mx-auto d-flex justify-content-center">

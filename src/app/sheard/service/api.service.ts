@@ -16,7 +16,7 @@ export class ApiService {
     { days: "45-60 days", id: 3 },
     { days: "60-90 days", id: 6 },
   ]
-  
+
   constructor(private _http: HttpClient) { }
 
   getCountry(): Observable<any> {
@@ -26,7 +26,13 @@ export class ApiService {
     return this._http.get(this.url)
   }
 
-  getTravellingDays(): Array<{ days: string, id?: number }> {
-    return this.days;
+  getTravellingDays(): Promise<any> {
+    return new Promise((resolve, reject) => {
+      if (this.days) {
+        resolve(this.days)
+      } else {
+        reject("database connectivity error")
+      }
+    })
   }
 }
